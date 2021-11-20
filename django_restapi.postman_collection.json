@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "950d3e6e-50b2-4cf6-82b5-fa890563b011",
+		"name": "django_restapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "user1password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user18",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user18password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/create_user/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/all_users",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/get_user/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user17password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user17",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "user11",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user10@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "user10lastname",
+							"type": "text"
+						},
+						{
+							"key": "is_staff",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/update_user/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"update_user",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/authenticate_user/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"authenticate_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user17password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user17",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/search_user?q=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search_user"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
